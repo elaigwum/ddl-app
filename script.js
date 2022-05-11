@@ -124,7 +124,7 @@ function handler(event) {
     requestNo: requisition.value,
     dateDue: dueDate.value,
     type: concessionType.value,
-    dayCount: daysNumber.value
+    dayCount: +daysNumber.value + 1
   }
   save(obj);
   displayItems();
@@ -146,6 +146,7 @@ function handler(event) {
 //handler for deleting an item from the UI and localStorage
  function remove(index){
    let arr = JSON.parse(localStorage.getItem('arr'));
+   arr.sort((a,b)=>a.cat.localeCompare(b.cat))
    let close = confirm('CONFIRM YOU WANT TO CLOSE THIS ADD?');
    if(close) {
     arr.splice(index, 1);
@@ -217,7 +218,7 @@ function save(obj) {
 // get items from local storage and display for the user
 function displayItems() {
   let arr = JSON.parse(localStorage.getItem('arr'));
-  arr.sort((a,b)=>a.cat.localeCompare(b.cat))
+  arr.sort((a,b)=>a.cat.localeCompare(b.cat));
   //console.log(sorted);
   
   let html = '';
