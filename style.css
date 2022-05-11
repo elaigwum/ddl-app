@@ -1,0 +1,180 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+/*table thead tr td{
+  text-align: center;
+  padding: 5px;
+  font-size: 17px;
+  background-color:#049;
+  color: #eee;
+  /*word-wrap: break-word;
+}*/
+
+.tablee{
+  width: 100%;
+  padding-top: 10px;
+}
+.table table {
+  width: 100%;
+}
+.format {
+  text-align: center;
+}
+
+.timer {
+width: 400px;
+margin: 15px;
+}
+
+.required {
+border: 1px solid #d21404
+/*border-color: #d21404;*/
+}
+
+.input-field {
+width: 100vw;
+/*height: 400px;*/
+display: flex;
+justify-content: center;
+align-items: center;
+margin-top: 10px;
+margin-bottom: 10px;
+}
+
+.input-field form {
+display: grid;
+grid-template-columns: auto auto auto;
+grid-template-rows: auto auto auto;
+justify-content: center;
+align-items: center;
+align-content: center;
+grid-column-gap: auto;
+width: 80%;
+height: 100%;
+}
+.submit {
+/*grid-column: 2 / span 2;*/
+font-size: 25px;
+padding-bottom: 10px;
+text-align: center;
+border-radius: 5px;
+background: #049;
+color: #fff;
+border: none;
+height: 33px;
+}
+/*#form {
+display: none;
+}*/
+.trow {
+text-align: left;
+}
+.form {
+display: none;
+}
+
+.input:active {
+border-color: aquamarine;
+}
+.input {
+border: none;
+padding: 5px;
+background-color: #eee;
+outline: none;
+width: 400px;
+font-size: 19px;
+height: 33px;
+border-radius: 5px;
+text-transform: uppercase;
+color: #000
+}
+.input::placeholder {
+font-size: 15px;
+text-align: center;
+}
+
+.add-btn {
+  display: block;
+  width: 40%;
+  margin: auto;
+  font-size: 2em;
+  padding: 5px;
+  border-radius: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border: none;
+  background-color: #049;
+  color: #eee;
+  box-shadow: 2px 3px 5px 0px skyblue;
+}
+.add-btn:hover {
+  cursor: pointer;
+}
+.text {
+color: red;
+display: none;
+}
+
+.concession {
+display: none;
+position: fixed;
+top: 28%;
+bottom: 0%;
+right: 0%;
+left: 40%;
+width: 330px;
+height: 300px;
+background: #d1ecf1;
+border-radius: 8px;
+}
+.concession .close{
+margin-top: 10px;
+margin-right: 10px;
+color: red;
+font-weight: 800;
+cursor: pointer;
+}
+.con-form {
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+width: 100%;
+height: 100%;
+}
+
+.con-form div {
+width: 80%;
+margin-top: 9px;
+}
+.con-form div input {
+border: none;
+padding: 5px;
+background-color: #eee;
+outline: none;
+width: 100%;
+font-size: 19px;
+height: 33px;
+border-radius: 5px;
+color: #000;
+}
+.con-form div .con-btn{
+border: none;
+padding: 5px;
+background-color: #eee;
+outline: none;
+width: 100%;
+font-size: 19px;
+height: 33px;
+border-radius: 5px;
+color: #000
+}/* Add your styles here */
+
+.delete {
+  padding: 3px;
+  border-radius: 4px;
+}

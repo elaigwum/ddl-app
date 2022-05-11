@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>AIRCRAFT DEFERED DEFECT LOG</title>
+	<link href="style.css" rel="stylesheet" type="text/css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+</head>
+
+<body>
+	<button class="add-btn btn-primary">CLICK TO CREATE ADD</button>
+
+    <div class="input-field form">
+     <form>
+       <label for="reg" class="label"><!--A/C Registration-->
+         <input type="text" placeholder="Aircraft Registration Number" id="reg" class="input" autocomplete="on" required>
+         <p class="reg-text text">provide aircraft registration number</p>
+       </label>
+      
+      <label for="add-number" class="label"><!--ADD Number-->
+        <input type="number" placeholder="ADD Number" id="add-number" autocomplete="on" class="input">
+        <p class="addnum-text text">provide ADD number</p>
+      </label>
+      
+      <label for="reference" class="label"><!--Reference-->
+        <input type="text" placeholder="MEL Reference" id="reference" autocomplete="on" class="input">
+        <p class="ref-text text">provide MEL/AMM reference</p>
+      </label>
+      
+      <label for="description" class="label"><!--Defered Defect-->
+        <input type="text" placeholder="Description of Defect" id="description" autocomplete="on" class="input">
+        <p class="des-text text">description of defect required</p>
+      </label>
+
+      <label for="restriction" class="label"><!--Restriction-->
+        <input type="text" placeholder="Operational Restriction" id="restriction" autocomplete="on" class="input">
+        <p class="res-text text">if no restriction input NIL</p>
+      </label>
+      
+      <label for="open-date" class="label"><!--Date Opened-->
+         <input type="date" placeholder="Date Opened" id="open-date" class="date input">
+         <p class="date-text text">ADD open date required</p>
+      </label>
+
+      <label for="category" class="label"><!--Category-->
+        <select class="input" id="category">
+          <option value="" disabled selected hidden>Select ADD CAT</option>
+          <option value="CAT A">CAT A</option>
+          <option value="CAT B">CAT B</option>
+          <option value="CAT C">CAT C</option>
+          <option value="CAT D">CAT D</option>
+          <option value="FLIGHT HOUR">FLIGHT HOUR</option>
+          <option value="FLIGHT CYCLE">FLIGHT CYCLE</option>
+        </select>
+        <p class="cat-text text">specify ADD category</p>
+        <!--<input type="text" placeholder="Category" id="category" autocomplete="on" class="input">-->
+      </label>
+     
+      <label for="days-number" class="label"><!--Number of Days-->
+        <input type="number" placeholder="Number of Days" id="days-number" autocomplete="on" class="date input" class="input">
+        <p class="days-text text">enter days in number only</p>
+      </label>
+      
+      <label for="request-number" class="label"><!--Requisiton-->
+        <input type="text" placeholder="Requisition Number" id="request-number" autocomplete="on" class="input">
+        <p class="req-text text">provide requisition. input N/A or T/S if none</p>
+      </label>
+      
+     <label for="due-date" class="label"><!--TLP Page-->
+        <input type="date" id="due-date" class="input">
+        <p class="tlp-text text">Due Date Required</p>
+      </label>
+
+     <label for="concession-type" class="label"><!--TLP Page-->
+        <select id="concession-type" class="input" required>
+          <option value="" selected disabled hidden>CONCESSION CAT</option>
+          <option value="ADD">ADD</option>
+          <option value="QUALITY">QUALITY</option>
+          <option value="NCAA">NCAA</option>
+        </select>>
+        <p class="tlp-text text">Due Date Required</p>
+      </label>
+      
+      <button class="submit btn-primary">Submit</button>
+     </form>
+    </div>
+    <div class="tablee">
+      <table class="table table-responsive table-hover table-striped">
+       <thead>
+         <tr class="info">
+           <td>Reg #</td>
+           <td>ADD #</td>
+           <td>MEL REF</td>
+           <td>Defect Description</td>
+           <td>Special Procedure</td>
+           <td>Date Raised</td>
+           <td>Days Rem</td>
+           <td>Category</td>
+           <td>Part Req</td>
+           <td>Due Date</td>
+           <td>Type</td>
+           <!--<td></td>-->
+         </tr>
+       </thead>
+       <tbody class="tbody">
+       </tbody>
+      </table>
+    </div>
+
+    <div class="timerr">
+      <span class="day"></span>
+      <span class="hour"></span>
+      <span class="minute"></span>
+      <span class="seconds"></span>
+    </div>
+
+    <div class="concession info">
+      <div class="close">X</div>
+      <form class="con-form">
+       <!--<div>
+        <label for="date">Date Opened</label>
+        <input type="date" id="date">
+       </div>-->
+        <div>
+          <label for="due">Concession Due Date</label>
+          <input type="date" id="due">
+        </div>
+        <div>
+          <label for="num">Concession days extension</label>
+          <input type="number" id="num">
+        </div>
+      <div>
+        <input type='submit' class='con-btn'>
+      </div>
+     </form>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
