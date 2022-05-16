@@ -235,7 +235,7 @@ function displayItems() {
     <td class="trow date-count">${element.cat == 'CAT A' || element.cat == 'CAT B' || element.cat == 'CAT C' || element.cat == 'CAT D' ? timer(element.openDate, element.dayCount) : 'N/A'}</td>
     <td class="trow">${element.cat.toUpperCase()}</td>
     <td class="trow">${element.requestNo.toUpperCase()}</td>
-    <td class="trow">${element.cat == 'FLIGHT HOUR' || element.cat == 'FLIGHT CYCLE' ? element.dayCount : element.dateDue}</td>
+    <td class="trow" ${countDown < 0 ? 'style="background-color: #ff4444; color: #fff"' : ''}>${element.cat == 'FLIGHT HOUR' || element.cat == 'FLIGHT CYCLE' ? element.dayCount : element.dateDue}</td>
     <td class="trow">${element.type}</td>
     <td><button  class="delete btn-primary"onClick="concession(${index})">Modify</button></td>
     <td><button onClick="remove(${index})" class="delete btn-danger" title="Close this ADD">X</button></td>
