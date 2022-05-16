@@ -224,7 +224,8 @@ function displayItems() {
   let html = '';
 
   arr.forEach((element, index) => {
-    html += `<tr class="format" id="${index}">
+    let countDown = parseInt(timer(element.openDate, element.dayCount));
+    html += `<tr class="format" id="${index}" ${element.cat == 'CAT A' && countDown <= 4 || element.cat == 'CAT B' && countDown <= 3 || element.cat == 'CAT C' && countDown <= 4 || element.cat == 'CAT D' && countDown <= 30 ? 'style="background-color: #ffbb33; color: #fff"' : ''}>
     <td class="trow">${element.regNumber.toUpperCase()}</td>
     <td class="trow">${element.add.toUpperCase()}</td>
     <td class="trow">${element.mel.toUpperCase()}</td>
